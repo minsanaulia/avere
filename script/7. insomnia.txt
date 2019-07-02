@@ -1,0 +1,87 @@
+create
+http://127.0.0.1:5000/createEmployee
+post
+json:
+{
+  "staff_id"          : "DC-FED-01-00",
+  "staff_name"        : "Muhammad Insan Aulia",
+  "user_id"           : "ican",
+  "email"             : "minsan.aulia@gmail.com",
+  "password"          : "12345",
+  "supervisor_user_id": "Fransiskus Alexis",
+  "sex"               : "P",
+  "division_code"     : "DC-FED",
+  "unit_code"         : "FED-U01",
+  "location"          : "Head Office",
+  "position"          : "Junior Front End Dev",
+  "expat"             : "0",
+  "contract"          : "0",
+  "balance"           : "60"
+}
+
+login
+http://127.0.0.1:5000/login
+post
+json:
+{
+  "user_id" : "ican",
+  "password": "12345"
+}
+
+profil
+get
+http://127.0.0.1:5000/getProfil/<staff_id>
+
+request
+post
+http://127.0.0.1:5000/createdLeaveRequest
+json:
+{
+  "user_id"          : "ican",
+  "leave_type"       : "Cuti Istri Hamil",
+  "start_date"       : "2019-04-28",
+  "start_date_length": 1.5,
+  "end_date"         : "2019-03-03",
+  "end_date_length"  : 0.25,
+  "requestor_remarks": "Istri Hamil Sudah Menjelang 9 Bulan"
+}
+
+history
+get 
+http://127.0.0.1:5000/getLeave_history/<staff_id>
+
+approve
+put
+http://127.0.0.1:5000/approveLeaveRequest/<leave_id_>
+json:
+{
+  "approval_status" : "1",
+  "approval_remarks": "Ok, selamat menempuh hidup baru"
+}
+
+update
+put
+http://127.0.0.1:5000/updateLeaveRequest/<leave_id_>
+json:
+{
+  "user_id"          : "ican",
+  "leave_type"       : "Cuti Pernikahan",
+  "start_date"       : "2019-03-28",
+  "start_date_length": 1.5,
+  "end_date"         : "2019-04-03",
+  "end_date_length"  : 0.25,
+  "requestor_remarks": "Cuti Pernikahan"
+}
+
+holiday
+post
+http://127.0.0.1:5000/addHoliday
+json:
+{
+  "holiday_name": "Hari Ibu",
+  "holiday_date": "2019-12-22"
+}
+
+leave
+get
+http://127.0.0.1:5000/getAllLeave

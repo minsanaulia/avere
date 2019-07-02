@@ -1,0 +1,2 @@
+insert into employee (staff_id, staff_name, user_id, email, password, supervisor_user_id, sex, division_code, unit_code, location, position, expat, contract, balance)
+		   	values ('DC-FED-01-00', 'Muhammad Insan Aulia', 'ican', 'minsan.aulia@gmail.com', '12345', 'Fransiskus Alexis', 'P', 'DC-FED', 'FED-U01', 'Head Office', 'Junior Front End Dev', '0', '0', '60' );
