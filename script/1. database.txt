@@ -22,7 +22,7 @@ create table division
 create table unit 
            ( unit_code varchar (10) primary key,
              unit_name varchar (100) unique not null,
-             division_name varchar (10) );
+             division_name varchar (100) );
 
 create table leave
            ( leave_id serial primary key,
