@@ -11,7 +11,7 @@ app.config['JSON_SORT_KEYS']=False
 POSTGRES = {
     'user' : 'postgres',
     'pw'   : 'musafirakhirzaman',
-    'db'   : 'leave_request',
+    'db'   : 'avere',
     'host' : 'localhost',
     'port' : '5432'
 }
@@ -28,4 +28,4 @@ from src.routes.etc import addHoliday
 
 @app.route('/')
 def main():
-    return 'test koneksi'
+    return 'tes koneksi'
